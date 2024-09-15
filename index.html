@@ -7,9 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('C:/Users/Lily Polekad/Desktop/Shaadi.com/August 2024/Embeded Tableau Dashboard/Image/a.jpg') no-repeat center center fixed; /* Set the cosmic background */
-            background-size: cover;
-            color: white;
+            background-color: #333; /* Dark background */
+            color: white; /* Text color for contrast */
             margin: 0;
             padding: 0;
         }
@@ -20,23 +19,18 @@
         .header-section {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between; /* Space between for images */
             margin-bottom: 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            padding: 10px;
-            border-radius: 10px;
-            animation: fadeIn 2s ease; /* Fade-in effect */
         }
         .dashboard-image {
-            max-width: 100px;
+            max-width: 100px; /* Adjust the width as needed */
             height: auto;
         }
         .dashboard-title {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
-            text-align: center;
-            flex: 1;
-            color: #FFD700; /* Gold color for the title */
+            text-align: center; /* Center the title */
+            flex: 1; /* Allow title to take up available space */
         }
         /* Overlay to cover the bottom 3 cm */
         .overlay {
@@ -44,27 +38,9 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 3cm;
-            background-color: rgba(0, 0, 0, 0.5); /* Transparent overlay */
-            z-index: 2;
-        }
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        /* Star animation */
-        .stars {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 5s infinite ease-in-out;
-        }
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
+            height: 3cm; /* Set height to 3 cm */
+            background-color: transparent; /* Transparent overlay */
+            z-index: 2; /* Higher than Tableau embed */
         }
     </style>
 </head>
