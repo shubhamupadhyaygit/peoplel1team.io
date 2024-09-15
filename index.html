@@ -7,58 +7,52 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #333; /* Dark background */
-            color: white; /* Text color for contrast */
+            background-color: #0A2A5E; /* Dark blue background */
+            color: white;
             margin: 0;
             padding: 0;
         }
         .dashboard-container {
             padding: 20px;
-            position: relative; /* Make it relative for overlay */
+            position: relative;
         }
         .header-section {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between for images */
+            justify-content: space-between;
             margin-bottom: 20px;
         }
         .dashboard-image {
-            max-width: 100px; /* Adjust the width as needed */
+            max-width: 100px;
             height: auto;
         }
         .dashboard-title {
             font-size: 24px;
             font-weight: bold;
-            text-align: center; /* Center the title */
-            flex: 1; /* Allow title to take up available space */
+            text-align: center;
+            flex: 1;
+            color: #FFD700; /* Yellow color for the title */
         }
-        /* Overlay to cover the bottom 3 cm */
         .overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 3cm; /* Set height to 3 cm */
-            background-color: transparent; /* Transparent overlay */
-            z-index: 2; /* Higher than Tableau embed */
+            height: 3cm;
+            background-color: transparent;
+            z-index: 2;
         }
     </style>
 </head>
 <body>
     <div class="dashboard-container">
-        <!-- Header Section with Images and Title -->
         <div class="header-section">
-            <!-- Image on the left side -->
-            <img src="C:/Users/Lily Polekad/Desktop/Shaadi.com/August 2024/Embeded Tableau Dashboard/Image/Shaadi_Logo.png" alt="Left Image" class="dashboard-image">
-            
-            <!-- Dashboard Title in the middle -->
+            <!-- Update the image source to relative paths or URLs -->
+            <img src="images/Shaadi_Logo.png" alt="Left Image" class="dashboard-image">
             <div class="dashboard-title">L1 & Team Wise Report</div>
-            
-            <!-- Image on the right side -->
-            <img src="C:/Users/Lily Polekad/Desktop/Shaadi.com/August 2024/Embeded Tableau Dashboard/Image/Shaadi_Logo.png" alt="Right Image" class="dashboard-image">
+            <img src="images/Shaadi_Logo.png" alt="Right Image" class="dashboard-image">
         </div>
         
-        <!-- Tableau Dashboard Embed -->
         <div class='tableauPlaceholder' id='viz1726388018387' style='position: relative'>
             <noscript>
                 <a href='#'>
@@ -83,15 +77,13 @@
             </object>
         </div>
         
-        <!-- Overlay to make the bottom 3 cm unclickable -->
         <div class="overlay"></div>
 
         <script type='text/javascript'>
-            // Embed Tableau script
             var divElement = document.getElementById('viz1726388018387');
             var vizElement = divElement.getElementsByTagName('object')[0];
             vizElement.style.width='100%';
-            vizElement.style.height=(window.innerHeight - divElement.offsetTop) + 'px'; // Adjust height to fit the window
+            vizElement.style.height=(window.innerHeight - divElement.offsetTop) + 'px';
             var scriptElement = document.createElement('script');
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
