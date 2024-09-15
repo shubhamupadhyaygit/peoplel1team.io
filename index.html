@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Dashboard Live</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Dark background */
+            color: white; /* Text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard-container {
+            padding: 20px;
+            position: relative; /* Make it relative for overlay */
+        }
+        .header-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between for images */
+            margin-bottom: 20px;
+        }
+        .dashboard-image {
+            max-width: 100px; /* Adjust the width as needed */
+            height: auto;
+        }
+        .dashboard-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center; /* Center the title */
+            flex: 1; /* Allow title to take up available space */
+        }
+        /* Overlay to cover the bottom 3 cm */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3cm; /* Set height to 3 cm */
+            background-color: transparent; /* Transparent overlay */
+            z-index: 2; /* Higher than Tableau embed */
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section with Images and Title -->
+        <div class="header-section">
+            <!-- Image on the left side -->
+            <img src="C:/Users/Lily Polekad/Desktop/Shaadi.com/August 2024/Embeded Tableau Dashboard/Image/Shaadi_Logo.png" alt="Left Image" class="dashboard-image">
+            
+            <!-- Dashboard Title in the middle -->
+            <div class="dashboard-title">L1 & Team Wise Report</div>
+            
+            <!-- Image on the right side -->
+            <img src="C:/Users/Lily Polekad/Desktop/Shaadi.com/August 2024/Embeded Tableau Dashboard/Image/Shaadi_Logo.png" alt="Right Image" class="dashboard-image">
+        </div>
+        
+        <!-- Tableau Dashboard Embed -->
+        <div class='tableauPlaceholder' id='viz1726388018387' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt='L1 ' src='https://public.tableau.com/static/images/L1/L1TeamReportsFreshdeskMonthly/L1/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='L1TeamReportsFreshdeskMonthly/L1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/L1/L1TeamReportsFreshdeskMonthly/L1/1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+                <param name='filter' value='publish=yes' />
+            </object>
+        </div>
+        
+        <!-- Overlay to make the bottom 3 cm unclickable -->
+        <div class="overlay"></div>
+
+        <script type='text/javascript'>
+            // Embed Tableau script
+            var divElement = document.getElementById('viz1726388018387');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';
+            vizElement.style.height=(window.innerHeight - divElement.offsetTop) + 'px'; // Adjust height to fit the window
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </div>
+</body>
+</html>
